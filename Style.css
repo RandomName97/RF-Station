@@ -1,0 +1,121 @@
+/*  Todo:
+ - If a button is clicked it will keep its background color
+   from ':hover' selector (because its still focused). Fix
+   so that it won't be focused anymore after being clicked.
+ - When range is selected (when "tabbing" through the elements)
+   the range thumb should change its background color
+ - Center all elements vertically in the 'buttonDiv(s)'
+*/
+
+* {font-family: Verdana;}
+
+body {
+  background-color: lightgray;
+  margin-left: 4%;
+  margin-top: 4%;
+  width: 600px;   /* Create scrollbar if screen is too small */
+}
+
+label {
+  float: left;
+  width: 32%;
+  cursor: text;
+}
+
+.buttonDiv {
+  margin-bottom: 3%;
+  margin-left: 3%;
+}
+
+/* Buttons: */
+input[type='button'] {
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  outline: none;
+  padding: 1% 3%;
+}
+
+.button {background: #0080ff;}
+.button:hover, .button:focus {background: #0073e6;}
+.button:active {background: #0066cc;}
+.on {background: #1ac720; margin-right: 3%;}
+.on:hover, .on:focus {background: #19b31e;}
+.on:active {background: #19961d;}
+.off {background: #f02828;}
+.off:hover, .off:focus {background: #d61111;}
+.off:active {background: #ab1d1d;}
+
+.extra {
+  margin-top: 4%;
+  margin-right: 3%;
+}
+
+.remoteButton {
+  width: 100%;
+  margin-bottom: 9%;
+}
+
+.remoteDiv {
+  display: none;
+  margin-top: 3%;
+  border: solid gray;
+  padding: 20px 20px 5px 20px;  /* Part of the bottom padding is removed because remote buttons have a bottom margin */
+  column-count: 3;
+  -webkit-column-count: 3;    /* Chrome, Safari, Opera */
+  -moz-column-count: 3;       /* Firefox */
+}
+
+/* Number box: */
+input[type=number] {
+  text-align: center;
+  width: 45px;
+  margin-left: 10px;
+}
+
+.percentSign {
+  margin-left: 5px;
+  display: inline;
+}
+
+/* Slider: */
+input[type=range] {
+	-webkit-appearance: none;
+	width: 45%;
+}
+
+input[type=range]:focus {outline: none;}
+input[type=range]::-webkit-slider-runnable-track {
+	background: #e5e5e5;
+	cursor: pointer;
+	height: 12px;
+	width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background: #0080ff;
+	cursor: pointer;
+	height: 20px;
+	width: 15px;
+  margin-top: -3.55px;
+}
+input[type=range]::-webkit-slider-thumb:hover {background: #0073e6;}
+input[type=range]::-webkit-slider-thumb:active {background: #0066cc;}
+
+/* Toast: */
+#toast {
+  display: none;                /* Hide the element by default */
+  min-width: 20%;               /* Set a default minimum width */
+  margin-left: -125px;          /* Divide value of min-width by 2*/ 
+  background-color: #333;       /* Background color */
+  color: #fff;                  /* White text color */
+  text-align: center;           /* Centered text */
+  border-radius: 2px;           /* Rounded borders */
+  padding: 16px;                /* Padding */
+  position: fixed;              /* Sit on top of the screen */
+  z-index: 1;                   /* Add a z-index if needed */
+  left: 50%;                    /* Center the toast */
+  bottom: 5%;
+}

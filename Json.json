@@ -1,0 +1,61 @@
+[
+  {
+    "room": "__Bedroom",
+    "device": "__RGB strip",
+    "type": "remote",
+    "buttons": {
+      "Power": 4588545,
+      "Mode+": 4588549,
+      "Mode-": 4588555,
+      "Speed+": 4588553,
+      "Speed-": 4588551,
+      "Demo": 4588552,
+      "Color+": 4588554,
+      "Color-": 4588557,
+      "Brightness+": 4588556,
+      "Brightness-": 4588559,
+      "White": 4588558,
+      "Red": 4588560,
+      "Green": 4588561,
+      "Blue": 4588562,
+      "Yellow": 4588563,
+      "Cyan": 4588564,
+      "Purple": 4588565
+    }
+  },
+  {
+    "room": "Bedroom",
+    "device": "Bedroom light",
+    "type": "proove",
+    "unit": 15
+  },
+  {
+    "room": "Hall",
+    "device": "Mirror lights",
+    "type": "proove",
+    "unit": 14
+  },
+  {
+    "room": "Living room",
+    "device": "Floor light",
+    "type": "proove",
+    "unit": 13
+  },
+  {
+    "room": "Living room",
+    "device": "Window lights",
+    "type": "digital",
+    "onCode": 332881,
+    "offCode": 332884
+  },
+  {
+    "type": "groups",
+    "devices": [
+      {
+        "name": "Mirror lights, Floor light, Window lights",
+        "on": [["Mirror lights", "proove", 14], ["Floor light", "proove", 13], ["Window lights", "digital", 332881]],
+        "off": [["Mirror lights", "proove", 14], ["Floor light", "proove", 13], ["Window room lights", "digital", 332884]]
+      }
+    ]
+  }
+]
